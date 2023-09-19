@@ -14,3 +14,17 @@ jobs:
         run: |
           node -v
           npm -v
+          run-python-commands
+    run: |
+      import platform
+      #print(platform.processor)
+      shell: python
+  run-windows-commands: 
+    run-on: windows-latest
+    needs: ["run-shell-command"]
+    steps: 
+      - name: Dictertory
+        run: Get-Location
+      - name: Directory bash
+        run: pwd
+        shell: bash
