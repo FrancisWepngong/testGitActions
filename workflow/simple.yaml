@@ -17,7 +17,7 @@ jobs:
           run-python-commands
     run: |
       import platform
-      #print(platform.processor)
+      #print{platform.processor()}
       shell: python
   run-windows-commands: 
     run-on: windows-latest
